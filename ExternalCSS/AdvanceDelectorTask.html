@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         p {
+                color: #333;               /* Default text color */
+                font-size: 16px;           /* Font size for paragraphs */
+                margin: 10px 0;            /* Vertical spacing */
+        }
+        #main-header {
+            color: darkblue;           /* Dark blue text */
+            text-align: center;        /* Centered text */
+            font-size: 2em;            /* Larger font size */
+            margin-bottom: 20px;       /* Bottom margin */
+        }
+        .highlight {
+            background-color: yellow;  /* Yellow background */
+            font-weight: bold;         /* Bold text */
+        }
+         p.highlight {
+                color: red;                /* Overrides text color to red */
+        }
+        input[type="text"] {
+            border: 1px solid #ccc;    /* Light gray border */
+            padding: 5px;              /* Padding inside input */
+            font-size: 14px;           /* Font size for input text */
+        }
+        a:hover {
+            color: green;              /* Change link color on hover */
+            text-decoration: underline;/* Underline link on hover */
+        }
+        div span {
+            color: purple;             /* Purple text for spans within divs */
+            font-style: italic;        /* Italic text style */
+        }
+        .container > p {
+            border: 1px solid blue;    /* Blue border for direct child paragraphs */
+            padding: 5px;              /* Padding inside the paragraphs */
+        }
+         h2 + p {
+            color: darkred;            /* Dark red text for the first paragraph after h2 */
+        }
+        h2 ~ p {
+            font-size: 14px;           /* Smaller font size for paragraphs following h2 */
+        }
+        .btn.primary {
+            background-color: blue;    /* Blue background */
+            color: white;              /* White text */
+            padding: 10px;             /* Padding for the button */
+            border: none;              /* No border */
+            text-align: center;        /* Centered text */
+            display: inline-block;     /* Button-like appearance */
+        }
+    </style>
+</head>
+<body>
+    <h1 id="main-header">CSS Selectors Advanced Practice Activity</h1>
+  
+  <!-- Element Selector Example -->
+  <p>This is a standard paragraph styled with the element selector.</p>
+  
+  <!-- Class and Combined Selector Example -->
+  <p class="highlight">This paragraph uses the "highlight" class, and the combined selector sets its text color to red.</p>
+  <p class="highlight">Another highlighted paragraph to demonstrate consistent styling.</p>
+  
+  <!-- Attribute Selector Example -->
+  <input type="text" placeholder="Enter your text here">
+  
+  <!-- Pseudo-class Example -->
+  <a href="https://example.com" target="_blank">Hover over this link to see the hover effect</a>
+  
+  <!-- Advanced: Descendant Selector Example -->
+  <div title="Descendant Demo">
+    <p>This div, because of its title attribute, could also be styled differently. Below is a nested span:</p>
+    <span>This span is styled by the descendant selector (div span) and appears in purple italics.</span>
+  </div>
+  
+  <!-- Advanced: Child Selector Example -->
+  <div class="container">
+    <p>This paragraph is a direct child of the container and is styled with a blue border and padding.</p>
+    <div>
+      <p>This paragraph is nested deeper (inside a div) and will not get the child selector styling from .container.</p>
+    </div>
+  </div>
+  
+  <!-- Advanced: Adjacent Sibling and General Sibling Selector Examples -->
+  <h2>Section Header</h2>
+  <p>This paragraph is immediately after the h2, so it is styled with dark red text (adjacent sibling selector).</p>
+  <p>This paragraph, although not immediately after the h2, is still a sibling and gets a smaller font size (general sibling selector).</p>
+  
+  <!-- Advanced: Multiple Class Selector Example -->
+  <div class="btn primary">Button Styled with Multiple Classes</div>
+</body>
+</html>
