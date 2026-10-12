@@ -1,0 +1,33 @@
+body {
+    background-color: #f4f4f4; /* light gray background */
+    font-family: Arial, sans-serif; /* using Arial or sans-serif fonts */
+    margin: 20px; /* 20px margin around the body */
+    color: #333; /* dark gray text color */
+}
+h1 {
+    color: darkblue; /* dark blue text */
+    text-align: center; /* center align text */
+    margin-bottom: 20px; /* 20px bottom margin */
+}
+p {
+    font-size: 18px; /* font size 18px */
+    line-height: 1.6; /* line height 1.6 for readability */
+    margin-bottom: 20px; /* 20px bottom margin */
+}
+table {
+    width: 60%; /* table width is 60% of its container */
+    border-collapse: collapse; /* merge table borders */
+    margin: 20px auto; /* Centers the table horizontally */
+}
+table, th, td {
+    border: 1px solid blue; /* blue border for table, th, and td */
+}
+th {
+    padding: 10px; /* 10px padding */
+    text-align: center; /* center align text in header cells */
+    background-color: wheat; /* wheat background color for header cells */
+}
+td {
+    padding: 10px; /* 10px padding */
+    text-align: left; /* left align text in data cells */
+}
