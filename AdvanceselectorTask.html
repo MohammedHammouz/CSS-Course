@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    /* Basic Selectors */
+    * {
+            box-sizing: border-box;
+    }
+
+    html {
+            width: 100%;
+    }
+    body {
+        margin: 0;
+        padding: 20px;
+        max-width: 100%;
+        font-family: Arial, sans-serif;
+    }
+
+    /* Element Selector: styles all <p> elements */
+    p {
+      color: #333;               /* Default text color */
+      font-size: 16px;           /* Font size for paragraphs */
+      margin: 10px 0;            /* Vertical spacing */
+    }
+    
+    /* ID Selector: uniquely styles the header with id "main-header" */
+    #main-header {
+      color: darkblue;           /* Dark blue text */
+      text-align: center;        /* Centered text */
+     
+      margin-bottom: 20px;       /* Bottom margin */
+      font-size: clamp(1.4rem, 4vw, 2rem);
+    overflow-wrap: break-word;
+    }
+    
+    /* Class Selector: styles elements with class "highlight" */
+    .highlight {
+      background-color: yellow;  /* Yellow background */
+      font-weight: bold;         /* Bold text */
+    }
+    
+    /* Combined Selector: targets <p> elements with class "highlight" */
+    p.highlight {
+      color: red;                /* Overrides text color to red */
+    }
+    
+    /* Attribute Selector: styles input fields of type text */
+    input[type="text"] {
+      border: 1px solid #ccc;    /* Light gray border */
+      padding: 5px;              /* Padding inside input */
+      font-size: 14px;           /* Font size for input text */
+    }
+    
+    /* Pseudo-class: styles links on hover */
+    a:hover {
+      color: green;              /* Change link color on hover */
+      text-decoration: underline;/* Underline link on hover */
+    }
+    
+    /* Advanced Selectors */
+    
+    /* 1. Descendant Selector: targets every <span> inside a <div> */
+    div span {
+      color: purple;             /* Purple text for spans within divs */
+      font-style: italic;        /* Italic text style */
+    }
+    
+    /* 2. Child Selector: styles <p> elements that are direct children of .container */
+    .container > p {
+      border: 1px solid blue;    /* Blue border for direct child paragraphs */
+      padding: 5px;              /* Padding inside the paragraphs */
+    }
+    
+    /* 3. Adjacent Sibling Selector: styles the <p> element immediately following an <h2> */
+    h2 + p {
+      color: darkred;            /* Dark red text for the first paragraph after h2 */
+    }
+    
+    /* 4. General Sibling Selector: styles all <p> elements that follow an <h2> in the same parent */
+    h2 ~ p {
+      font-size: 14px;           /* Smaller font size for paragraphs following h2 */
+    }
+    
+    /* 5. Multiple Class Selector: targets elements with both "btn" and "primary" classes */
+    .btn.primary {
+      background-color: blue;    /* Blue background */
+      color: white;              /* White text */
+      padding: 10px;             /* Padding for the button */
+      border: none;              /* No border */
+      text-align: center;        /* Centered text */
+      display: inline-block;     /* Button-like appearance */
+    }
+    @media screen and (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+
+    #main-header {
+        font-size: 1.6rem;
+    }
+    @media screen and (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    #main-header {
+        font-size: 1.3rem;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    input[type="text"] {
+        max-width: 100%;
+    }
+
+    .btn.primary {
+        display: block;
+        width: 100%;
+    }
+}
+}
+/* All screen sizes */
+
+/* Large desktops: 1200px and above */
+@media screen and (min-width: 1200px) {
+    body {
+        padding: 30px;
+    }
+
+    #main-header {
+        font-size: 2rem;
+    }
+
+    .container {
+        max-width: 1000px;
+        margin-inline: auto;
+    }
+}
+
+/* Laptops and desktops: 992px - 1199px */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    body {
+        padding: 25px;
+    }
+
+    #main-header {
+        font-size: 1.9rem;
+    }
+}
+
+/* Small laptops and tablets: 769px - 991px */
+@media screen and (min-width: 769px) and (max-width: 991px) {
+    body {
+        padding: 20px;
+    }
+
+    #main-header {
+        font-size: 1.7rem;
+    }
+
+    .container {
+        width: 100%;
+    }
+}
+
+/* Tablets and small windows: 481px - 768px */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+
+    #main-header {
+        font-size: 1.5rem;
+    }
+
+    input[type="text"] {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .btn.primary {
+        max-width: 100%;
+    }
+}
+
+/* Mobile: 376px - 480px */
+@media screen and (min-width: 376px) and (max-width: 480px) {
+    body {
+        padding: 12px;
+    }
+
+    #main-header {
+        font-size: 1.35rem;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    input[type="text"] {
+        max-width: 100%;
+    }
+
+    .btn.primary {
+        display: block;
+        width: 100%;
+    }
+}
+
+/* Small mobile: 320px - 375px */
+@media screen and (min-width: 320px) and (max-width: 375px) {
+    body {
+        padding: 8px;
+    }
+
+    #main-header {
+        font-size: 1.2rem;
+    }
+
+    p {
+        font-size: 13px;
+    }
+
+    .container > p {
+        padding: 8px;
+    }
+
+    input[type="text"] {
+        max-width: 100%;
+    }
+
+    .btn.primary {
+        display: block;
+        width: 100%;
+        padding: 8px;
+    }
+}
+
+/* Very narrow screens: less than 320px */
+@media screen and (max-width: 319px) {
+    body {
+        padding: 5px;
+    }
+
+    #main-header {
+        font-size: 1rem;
+    }
+
+    p {
+        font-size: 12px;
+    }
+
+    input[type="text"] {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .btn.primary {
+        display: block;
+        width: 100%;
+        padding: 6px;
+    }
+}
+
+  </style>
+</head>
+<body>
+    <h1 id="main-header">CSS Selectors Advanced Practice Activity</h1>
+  
+  <!-- Element Selector Example -->
+  <p>This is a standard paragraph styled with the element selector.</p>
+  
+  <!-- Class and Combined Selector Example -->
+  <p class="highlight">This paragraph uses the "highlight" class, and the combined selector sets its text color to red.</p>
+  <p class="highlight">Another highlighted paragraph to demonstrate consistent styling.</p>
+  
+  <!-- Attribute Selector Example -->
+  <input type="text" placeholder="Enter your text here">
+  
+  <!-- Pseudo-class Example -->
+  <a href="https://example.com" target="_blank">Hover over this link to see the hover effect</a>
+  
+  <!-- Advanced: Descendant Selector Example -->
+  <div title="Descendant Demo">
+    <p>This div, because of its title attribute, could also be styled differently. Below is a nested span:</p>
+    <span>This span is styled by the descendant selector (div span) and appears in purple italics.</span>
+  </div>
+  
+  <!-- Advanced: Child Selector Example -->
+  <div class="container">
+    <p>This paragraph is a direct child of the container and is styled with a blue border and padding.</p>
+    <div>
+      <p>This paragraph is nested deeper (inside a div) and will not get the child selector styling from .container.</p>
+    </div>
+  </div>
+  
+  <!-- Advanced: Adjacent Sibling and General Sibling Selector Examples -->
+  <h2>Section Header</h2>
+  <p>This paragraph is immediately after the h2, so it is styled with dark red text (adjacent sibling selector).</p>
+  <p>This paragraph, although not immediately after the h2, is still a sibling and gets a smaller font size (general sibling selector).</p>
+  
+  <!-- Advanced: Multiple Class Selector Example -->
+  <div class="btn primary">Button Styled with Multiple Classes</div>
+</body>
+</html>
