@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Activity: CSS Outline Debugging</title>
+  <style>
+    body {
+      margin: 2rem;
+      font-family: Arial, sans-serif;
+      line-height: 1.5;
+      color: #333;
+    }
+    h1, h2 {
+      margin-bottom: 1rem;
+    }
+    section {
+      margin-bottom: 2rem;
+    }
+
+    /* 1) Debug Layout */
+    .debug {
+      outline: 3px solid orange;
+    }
+
+    /* 2) Custom Focus for link and input */
+    .custom-focus:focus {
+      outline: 3px solid blue;
+      outline-offset: 2px;
+    }
+
+    a.custom-focus {
+      text-decoration: none;
+      color: #0066cc;
+      padding: 0.25em 0.5em;
+      border-radius: 4px;
+    }
+
+    input.custom-focus {
+      padding: 0.5em;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    /* 3) Temporary Highlights on hover */
+    .card {
+      width: 200px;
+      padding: 1rem;
+      background: #f0f0f0;
+      border-radius: 6px;
+      transition: outline-offset 0.2s;
+    }
+    .card:hover {
+      outline: 4px dashed red;
+      outline-offset: 4px;
+    }
+
+    /* Observations list styling */
+    .observations li {
+      margin-bottom: 0.5em;
+    }
+  </style>
+</head>
+<body>
+    <h1>Practice Activity: CSS Outline</h1>
+
+  <section>
+    <h2>1) Debug Layout</h2>
+    <div class="debug">
+      <p>This <code>.debug</code> wrapper has an orange outline.</p>
+      <p>Notice the outline does not change the element’s size or push other content away.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>2) Custom Focus</h2>
+    <p>
+      <a href="#" class="custom-focus">Focusable Link</a>
+    </p>
+    <p>
+      <input type="text" class="custom-focus" placeholder="Focus me with Tab">
+    </p>
+    <p>Press Tab to move focus—both elements get a blue outline without shifting layout.</p>
+  </section>
+
+  <section>
+    <h2>3) Temporary Highlights</h2>
+    <div class="card">
+      <p>Hover over this card to see a red dashed outline with offset.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>4) Observations</h2>
+    <ul class="observations">
+      <li>The <strong>outline</strong> is drawn outside the border and does <em>not</em> affect the box model or element dimensions.</li>
+      <li>Unlike borders, outlines do not push or resize adjacent elements—they sit “on top” of the layout.</li>
+      <li>Outlines can overlap neighboring content if the offset is negative (not shown) or minimal.</li>
+      <li>Outlines are not limited by border radius and can follow non-rectangular element shapes in some browsers.</li>
+    </ul>
+  </section>
+</body>
+</html>
