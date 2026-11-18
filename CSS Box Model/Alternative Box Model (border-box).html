@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .border-box {
+            box-sizing: border-box;
+            width: 200px;                /* includes padding & border */
+            padding: 20px;               /* reduces content width */
+            border: 5px solid #333;
+            margin: 20px;
+            background: #ffecb3;
+        }
+    </style>
+</head>
+<body>
+    <div class="border-box">
+        Border-box: total width = 200px (fixed), content area = 200 - 40 (padding) - 10 (border) = 150px
+    </div>
+    <script>
+        const element = document.querySelector(' .border-box');
+        console.log(element.getBoundingClientRect().width);
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .content-box {
+            box-sizing: content-box;     /* default */
+            width: 200px;                /* content width */
+            padding: 20px;               /* adds 40px total */
+            border: 5px solid #333;      /* adds 10px total */
+            margin: 20px;
+            background: #c5cae9;
+        }
+    </style>
+    
+</head>
+<body>
+   
+    <div class="content-box">
+        Content-box: total width = 200 + 40 (padding) + 10 (border) = 250px
+    </div>
+    <script>
+        const element = document.querySelector('.content-box');
+        console.log(element.getBoundingClientRect().width);
+    </script>
+</body>
+</html>
