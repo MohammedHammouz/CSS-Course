@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * { box-sizing: border-box; margin:0; padding:0; }
+        body { font-family: sans-serif; padding:1rem; }
+        .flex-container{
+            display: flex;
+            justify-content: space-around;
+            align-content: center;
+            flex-wrap: wrap; 
+            border: 2px solid #333;
+            height: 200px;
+        }
+        .flex-item{
+            flex: 0 0 100px;
+            background: #4a90e2;
+            text-align: center;
+            line-height: 100px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h2>Flexbox Container</h2>
+    <p><em>Tracks are flex lines; extra space is distributed.</em></p>
+    <div class="flex-container">
+        <div class="flex-item">A</div>
+        <div class="flex-item">B</div>
+        <div class="flex-item">C</div>
+        <div class="flex-item">D</div>
+        <div class="flex-item">E</div>
+        <div class="flex-item">F</div>
+    </div>
+</body>
+</html>
