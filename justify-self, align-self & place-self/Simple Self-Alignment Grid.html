@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grid{
+            background: #eee;
+            display: grid;
+            grid-template-columns: repeat(2,100px);
+            grid-template-rows: repeat(2,100px);
+            gap: 10px;
+            padding: 10px;
+        }
+        .grid div{
+            background: #4a90e2;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: sans-serif;
+        }
+        .right{
+            justify-self: end;
+        }
+        .bottom{
+            
+            align-self: end;
+        }
+        .center{
+            justify-self: center;
+            align-self: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Simple Self-Alignment Grid</h1>
+    <div class="grid">
+        <div class="default">Default</div>
+        <div class="right">Right</div>
+        <div class="bottom">Bottom</div>
+        <div class="center">Center</div>
+        
+    </div>
+</body>
+</html>
